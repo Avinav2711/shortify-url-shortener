@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # The Primary Database Hardware
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: url_shortener_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: url_shortener
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # The In-Memory Cache Hardware
+  redis-cache:
+    image: redis:7-alpine
+    container_name: url_shortener_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  # This ensures your DB data isn't deleted when you shut down the container
+  postgres_data:
