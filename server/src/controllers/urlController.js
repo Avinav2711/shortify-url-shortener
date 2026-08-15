@@ -1,6 +1,6 @@
 const shortid = require("shortid");
 const validator = require("validator");
-const Url = require("../models/Url");
+const Url = require("../models/url");
 
 /**
  * @desc    Create Short URL
