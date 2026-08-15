@@ -8,7 +8,7 @@ import DashboardSearch from "../components/dashboard/DashboardSearch";
 import DashboardTable from "../components/dashboard/DashboardTable";
 import Loader from "../components/Loader";
 
-const API = "http://localhost:5000/api";
+const API = `${import.meta.env.VITE_API_URL}/api`;
 
 export default function Dashboard() {
   const [urls, setUrls] = useState([]);

@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import toast from "react-hot-toast";
 
-const API = "http://localhost:5000/api";
+const API = `${import.meta.env.VITE_API_URL}/api`;
 
 export default function Dashboard() {
   const [urls, setUrls] = useState([]);
