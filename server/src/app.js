@@ -34,9 +34,9 @@ app.get("/:code", redirectUrl);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log("==================================");
   console.log(`🚀 Server running on ${PORT}`);
-  console.log(`📍 API: http://localhost:${PORT}/api`);
+  console.log(`📡 API: http://localhost:${PORT}/api`);
   console.log("==================================");
 });
